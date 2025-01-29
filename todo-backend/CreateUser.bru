@@ -1,0 +1,21 @@
+meta {
+  name: CreateUser
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9000/create/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_data" : {
+      "user_name": "XYZ",
+      "pass_word": "asfasonfkas",
+      "email": "xyzabc@gmail.com"
+    }
+  }
+}

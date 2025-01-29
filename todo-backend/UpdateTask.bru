@@ -1,0 +1,20 @@
+meta {
+  name: UpdateTask
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:9000/update/task
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "task_id" : 5,
+    "task_name" : "Clean Room",
+    "task_details: " :  "asdasdafsasda",
+    "task_status" : "in_progress"
+  }
+}

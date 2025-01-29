@@ -1,0 +1,19 @@
+meta {
+  name: CreateTask
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:9000/create/task
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_name" : "ABC",
+    "task_name" : "Clean Car",
+    "task_details: " : "sdaknsfp asinfaosf napsofn asfjna sfkpap fasofm pasof asas."
+  }
+}

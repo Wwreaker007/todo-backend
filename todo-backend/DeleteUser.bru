@@ -1,0 +1,17 @@
+meta {
+  name: DeleteUser
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:9000/delete/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_name" : "XYZ"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: GetAllTasks
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:9000/get/tasks/all
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_name" : "ABC"
+  }
+}

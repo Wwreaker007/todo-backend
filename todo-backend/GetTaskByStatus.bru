@@ -1,0 +1,18 @@
+meta {
+  name: GetTaskByStatus
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:9000/get/tasks/status
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_name" : "ABC",
+    "task_status" : "completed"
+  }
+}
