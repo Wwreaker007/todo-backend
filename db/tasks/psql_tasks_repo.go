@@ -28,7 +28,7 @@ func NewTaskRepository(client *sql.DB) *TaskRepository{
 }
 
 func (tr *TaskRepository) CreateTask(ctx context.Context, data common.TaskData) error {
-	_, err := tr.Client.Exec(CREATE_TASK_QUERY, data.UserName, data.TaskName, data.TaskDetails, string(data.TaskStatus))
+	_, err := tr.Client.Exec(CREATE_TASK_QUERY, data.UserName, data.TaskName, data.TaskDetails, data.TaskStatus)
 	if err != nil {
 		log.Println("Error while creating task: ", err)
 		return err

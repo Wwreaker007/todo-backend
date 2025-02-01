@@ -4,7 +4,7 @@ import "todo-backend/data/common"
 
 type GetTaskStatusRequest struct{
 	UserName 		string 				`json:"user_name"`
-	Status 			common.TaskStatus 	`json:"status"`
+	Status 			common.TaskStatus 	`json:"task_status"`
 }
 
 type GetTaskStatusResponse struct{
