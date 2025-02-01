@@ -14,6 +14,7 @@ const (
 	CREATE_USER = "/create/user"
 	LOGIN_USER = "/login/user"
 	DELETE_USER = "/delete/user"
+	LOGOUT_USER = "/logout/user"
 
 	CREATE_TASK = "/create/task"
 	GET_ALL_TASKS = "/get/tasks/all"
@@ -49,6 +50,7 @@ func (s *Server) ServiceStartup() error{
 	serveMux.HandleFunc(CREATE_USER, handler.NewCreateUserHandler(userService).Handle)
 	serveMux.HandleFunc(LOGIN_USER, handler.NewLoginUserHandler(userService).Handle)
 	serveMux.HandleFunc(DELETE_USER, handler.NewDeleteUserHandler(userService).Handle)
+	serveMux.HandleFunc(LOGOUT_USER, handler.NewLogoutUserHandler(userService).Handle)
 
 	// Registering the handler with the serveMux (Task Service)
 	serveMux.HandleFunc(CREATE_TASK, handler.NewCreateTaskHanlder(taskService).Handle)

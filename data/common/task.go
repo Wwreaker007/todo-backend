@@ -3,9 +3,9 @@ package common
 type TaskStatus string
 
 const (
-	Pending TaskStatus = "pending"
-	InProgress TaskStatus = "in_progress"
-	Completed TaskStatus = "completed"
+	Pending TaskStatus = "PENDING"
+	InProgress TaskStatus = "IN_PROGRESS"
+	Completed TaskStatus = "COMPLETED"
 )
 
 type Task struct{

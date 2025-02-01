@@ -3,8 +3,10 @@
 CREATE TABLE users (
     user_name       TEXT PRIMARY KEY,
     user_password   TEXT NOT NULL,
+    login_status    TEXT NOT NULL,
     email           TEXT NOT NULL,
-    created_on      TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    created_on      TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_on      TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 -- +goose StatementEnd
 

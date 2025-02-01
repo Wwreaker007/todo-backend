@@ -9,6 +9,7 @@ import (
 type UserReposioryManager interface {
 	CreateUser(context.Context, common.UserData) error
 	GetUserByUserName(context.Context, string) (common.User, error)
+	UpdateUser(context.Context, common.User) error
 	DeleteUser(context.Context, string) error
 }
 
@@ -24,6 +25,7 @@ type TasksRepositoryManager interface {
 type UserServiceManager interface{
 	SingUp(context.Context, contracts.CreateUserRequest) contracts.CreateUserResponse
 	Login(context.Context, contracts.LoginUserRequest) contracts.LoginUserResponse
+	Logout(context.Context, contracts.LogoutUserRequest) contracts.LogoutUserResponse
 	DeleteUser(context.Context, contracts.DeleteUserRequest) contracts.DeleteUserResponse
 }
 
